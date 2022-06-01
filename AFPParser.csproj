@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3DA66ED3-616E-4B1A-AF8C-05E98A74929A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AFPParser</RootNamespace>
+    <AssemblyName>AFPParser</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Objects\Container.cs" />
+    <Compile Include="Objects\Helpers\Code Page GIDs\1140.cs" />
+    <Compile Include="Objects\Helpers\Code Page GIDs\1252.cs" />
+    <Compile Include="Objects\Helpers\Converters.cs" />
+    <Compile Include="Objects\Helpers\Extensions.cs" />
+    <Compile Include="Objects\Helpers\Mappings.cs" />
+    <Compile Include="Objects\Image Self Defining Fields\BandImage.cs" />
+    <Compile Include="Objects\Image Self Defining Fields\BandImageData.cs" />
+    <Compile Include="Objects\Image Self Defining Fields\BeginImageContent.cs" />
+    <Compile Include="Objects\Image Self Defining Fields\BeginSegment.cs" />
+    <Compile Include="Objects\Image Self Defining Fields\BeginTile.cs" />
+    <Compile Include="Objects\Image Self Defining Fields\BeginTransparencyMask.cs" />
+    <Compile Include="Objects\Image Self Defining Fields\EndImageContent.cs" />
+    <Compile Include="Objects\Image Self Defining Fields\EndSegment.cs" />
+    <Compile Include="Objects\Image Self Defining Fields\EndTile.cs" />
+    <Compile Include="Objects\Image Self Defining Fields\EndTransparencyMask.cs" />
+    <Compile Include="Objects\Image Self Defining Fields\ExternalAlgorithmSpecification.cs" />
+    <Compile Include="Objects\Image Self Defining Fields\IDESize.cs" />
+    <Compile Include="Objects\Image Self Defining Fields\IDEStructure.cs" />
+    <Compile Include="Objects\Image Self Defining Fields\ImageData.cs" />
+    <Compile Include="Objects\Image Self Defining Fields\ImageEncoding.cs" />
+    <Compile Include="Objects\Image Self Defining Fields\ImageLUT_ID.cs" />
+    <Compile Include="Objects\Image Self Defining Fields\ImageSize.cs" />
+    <Compile Include="Objects\Image Self Defining Fields\ImageSubsampling.cs" />
+    <Compile Include="Objects\Image Self Defining Fields\IncludeTile.cs" />
+    <Compile Include="Objects\Image Self Defining Fields\IOCAFunctionSetIdentification.cs" />
+    <Compile Include="Objects\Image Self Defining Fields\SetBilevelImageColor.cs" />
+    <Compile Include="Objects\Image Self Defining Fields\SetExtendedBilevelImageColor.cs" />
+    <Compile Include="Objects\Image Self Defining Fields\TilePosition.cs" />
+    <Compile Include="Objects\Image Self Defining Fields\TileSetColor.cs" />
+    <Compile Include="Objects\Image Self Defining Fields\TileSize.cs" />
+    <Compile Include="Objects\Image Self Defining Fields\UNKNOWN.cs" />
+    <Compile Include="Objects\Image Self Defining Fields\TileTOC.cs" />
+    <Compile Include="Objects\PTX Control Sequences\AMB.cs" />
+    <Compile Include="Objects\PTX Control Sequences\AMI.cs" />
+    <Compile Include="Objects\PTX Control Sequences\BLN.cs" />
+    <Compile Include="Objects\PTX Control Sequences\BSU.cs" />
+    <Compile Include="Objects\PTX Control Sequences\DBR.cs" />
+    <Compile Include="Objects\PTX Control Sequences\DIR.cs" />
+    <Compile Include="Objects\PTX Control Sequences\ESU.cs" />
+    <Compile Include="Objects\PTX Control Sequences\GAR.cs" />
+    <Compile Include="Objects\PTX Control Sequences\GIR.cs" />
+    <Compile Include="Objects\PTX Control Sequences\GLC.cs" />
+    <Compile Include="Objects\PTX Control Sequences\GOR.cs" />
+    <Compile Include="Objects\PTX Control Sequences\NOP.cs" />
+    <Compile Include="Objects\PTX Control Sequences\OVS.cs" />
+    <Compile Include="Objects\PTX Control Sequences\RMB.cs" />
+    <Compile Include="Objects\PTX Control Sequences\RMI.cs" />
+    <Compile Include="Objects\PTX Control Sequences\RPS.cs" />
+    <Compile Include="Objects\PTX Control Sequences\SBI.cs" />
+    <Compile Include="Objects\PTX Control Sequences\SCFL.cs" />
+    <Compile Include="Objects\PTX Control Sequences\SEC.cs" />
+    <Compile Include="Objects\PTX Control Sequences\SIA.cs" />
+    <Compile Include="Objects\PTX Control Sequences\SIM.cs" />
+    <Compile Include="Objects\PTX Control Sequences\STC.cs" />
+    <Compile Include="Objects\PTX Control Sequences\SVI.cs" />
+    <Compile Include="Objects\PTX Control Sequences\TBM.cs" />
+    <Compile Include="Objects\PTX Control Sequences\TRN.cs" />
+    <Compile Include="Objects\PTX Control Sequences\UCT.cs" />
+    <Compile Include="Objects\PTX Control Sequences\UNKNOWN.cs" />
+    <Compile Include="Objects\PTX Control Sequences\USC.cs" />
+    <Compile Include="Objects\Structured Fields\BAG.cs" />
+    <Compile Include="Objects\Structured Fields\BBC.cs" />
+    <Compile Include="Objects\Structured Fields\BCF.cs" />
+    <Compile Include="Objects\Structured Fields\BCP.cs" />
+    <Compile Include="Objects\Structured Fields\BDA.cs" />
+    <Compile Include="Objects\Structured Fields\BDD.cs" />
+    <Compile Include="Objects\Structured Fields\BDG.cs" />
+    <Compile Include="Objects\Structured Fields\BDI.cs" />
+    <Compile Include="Objects\Structured Fields\BDM.cs" />
+    <Compile Include="Objects\Structured Fields\BDT.cs" />
+    <Compile Include="Objects\Structured Fields\BDX.cs" />
+    <Compile Include="Objects\Structured Fields\BFG.cs" />
+    <Compile Include="Objects\Structured Fields\BFM.cs" />
+    <Compile Include="Objects\Structured Fields\BFN.cs" />
+    <Compile Include="Objects\Structured Fields\BGR.cs" />
+    <Compile Include="Objects\Structured Fields\BII.cs" />
+    <Compile Include="Objects\Structured Fields\BIM.cs" />
+    <Compile Include="Objects\Structured Fields\BMM.cs" />
+    <Compile Include="Objects\Structured Fields\BMO.cs" />
+    <Compile Include="Objects\Structured Fields\BNG.cs" />
+    <Compile Include="Objects\Structured Fields\BOC.cs" />
+    <Compile Include="Objects\Structured Fields\BOG.cs" />
+    <Compile Include="Objects\Structured Fields\EPF.cs" />
+    <Compile Include="Objects\Structured Fields\BPG.cs" />
+    <Compile Include="Objects\Structured Fields\BPM.cs" />
+    <Compile Include="Objects\Structured Fields\BPF.cs" />
+    <Compile Include="Objects\Structured Fields\BPS.cs" />
+    <Compile Include="Objects\Structured Fields\BPT.cs" />
+    <Compile Include="Objects\Structured Fields\BRG.cs" />
+    <Compile Include="Objects\Structured Fields\BRS.cs" />
+    <Compile Include="Objects\Structured Fields\BSG.cs" />
+    <Compile Include="Objects\Structured Fields\CCP.cs" />
+    <Compile Include="Objects\Structured Fields\CDD.cs" />
+    <Compile Include="Objects\Structured Fields\CFC.cs" />
+    <Compile Include="Objects\Structured Fields\CFI.cs" />
+    <Compile Include="Objects\Structured Fields\CPC.cs" />
+    <Compile Include="Objects\Structured Fields\CPD.cs" />
+    <Compile Include="Objects\Structured Fields\CPI.cs" />
+    <Compile Include="Objects\Structured Fields\CTC.cs" />
+    <Compile Include="Objects\Structured Fields\DXD.cs" />
+    <Compile Include="Objects\Structured Fields\EAG.cs" />
+    <Compile Include="Objects\Structured Fields\EBC.cs" />
+    <Compile Include="Objects\Structured Fields\ECF.cs" />
+    <Compile Include="Objects\Structured Fields\ECP.cs" />
+    <Compile Include="Objects\Structured Fields\EDG.cs" />
+    <Compile Include="Objects\Structured Fields\EDI.cs" />
+    <Compile Include="Objects\Structured Fields\EDM.cs" />
+    <Compile Include="Objects\Structured Fields\EDT.cs" />
+    <Compile Include="Objects\Structured Fields\EDX.cs" />
+    <Compile Include="Objects\Structured Fields\EFG.cs" />
+    <Compile Include="Objects\Structured Fields\EFM.cs" />
+    <Compile Include="Objects\Structured Fields\EFN.cs" />
+    <Compile Include="Objects\Structured Fields\EGR.cs" />
+    <Compile Include="Objects\Structured Fields\EII.cs" />
+    <Compile Include="Objects\Structured Fields\EIM.cs" />
+    <Compile Include="Objects\Structured Fields\EMM.cs" />
+    <Compile Include="Objects\Structured Fields\EMO.cs" />
+    <Compile Include="Objects\Structured Fields\ENG.cs" />
+    <Compile Include="Objects\Structured Fields\EOC.cs" />
+    <Compile Include="Objects\Structured Fields\EOG.cs" />
+    <Compile Include="Objects\Structured Fields\EPG.cs" />
+    <Compile Include="Objects\Structured Fields\EPM.cs" />
+    <Compile Include="Objects\Structured Fields\EPS.cs" />
+    <Compile Include="Objects\Structured Fields\EPT.cs" />
+    <Compile Include="Objects\Structured Fields\ERG.cs" />
+    <Compile Include="Objects\Structured Fields\ERS.cs" />
+    <Compile Include="Objects\Structured Fields\ESG.cs" />
+    <Compile Include="Objects\Structured Fields\FDS.cs" />
+    <Compile Include="Objects\Structured Fields\FDX.cs" />
+    <Compile Include="Objects\Structured Fields\FGD.cs" />
+    <Compile Include="Objects\Structured Fields\FNC.cs" />
+    <Compile Include="Objects\Structured Fields\FND.cs" />
+    <Compile Include="Objects\Structured Fields\FNG.cs" />
+    <Compile Include="Objects\Structured Fields\FNI.cs" />
+    <Compile Include="Objects\Structured Fields\FNM.cs" />
+    <Compile Include="Objects\Structured Fields\FNN.cs" />
+    <Compile Include="Objects\Structured Fields\FNO.cs" />
+    <Compile Include="Objects\Structured Fields\FNP.cs" />
+    <Compile Include="Objects\Structured Fields\GAD.cs" />
+    <Compile Include="Objects\Structured Fields\GDD.cs" />
+    <Compile Include="Objects\Structured Fields\ICP.cs" />
+    <Compile Include="Objects\Structured Fields\IDD.cs" />
+    <Compile Include="Objects\Structured Fields\IDM.cs" />
+    <Compile Include="Objects\Structured Fields\IEL.cs" />
+    <Compile Include="Objects\Structured Fields\IID.cs" />
+    <Compile Include="Objects\Structured Fields\IMM.cs" />
+    <Compile Include="Objects\Structured Fields\IOB.cs" />
+    <Compile Include="Objects\Structured Fields\IOC.cs" />
+    <Compile Include="Objects\Structured Fields\IPD.cs" />
+    <Compile Include="Objects\Structured Fields\IPG.cs" />
+    <Compile Include="Objects\Structured Fields\IPO.cs" />
+    <Compile Include="Objects\Structured Fields\IPS.cs" />
+    <Compile Include="Objects\Structured Fields\IRD.cs" />
+    <Compile Include="Objects\Structured Fields\LLE.cs" />
+    <Compile Include="Objects\Structured Fields\LNC.cs" />
+    <Compile Include="Objects\Structured Fields\LND.cs" />
+    <Compile Include="Objects\Structured Fields\MBC.cs" />
+    <Compile Include="Objects\Structured Fields\MCC.cs" />
+    <Compile Include="Objects\Structured Fields\MCD.cs" />
+    <Compile Include="Objects\Structured Fields\MCF1.cs" />
+    <Compile Include="Objects\Structured Fields\MCF2.cs" />
+    <Compile Include="Objects\Structured Fields\MDD.cs" />
+    <Compile Include="Objects\Structured Fields\MDR.cs" />
+    <Compile Include="Objects\Structured Fields\MFC.cs" />
+    <Compile Include="Objects\Structured Fields\MGO.cs" />
+    <Compile Include="Objects\Structured Fields\MIO.cs" />
+    <Compile Include="Objects\Structured Fields\MMC.cs" />
+    <Compile Include="Objects\Structured Fields\MMO.cs" />
+    <Compile Include="Objects\Structured Fields\MMT.cs" />
+    <Compile Include="Objects\Structured Fields\MPG.cs" />
+    <Compile Include="Objects\Structured Fields\MPO.cs" />
+    <Compile Include="Objects\Structured Fields\MPS.cs" />
+    <Compile Include="Objects\Structured Fields\MSU.cs" />
+    <Compile Include="Objects\Structured Fields\OBD.cs" />
+    <Compile Include="Objects\Structured Fields\OBP.cs" />
+    <Compile Include="Objects\Structured Fields\OCD.cs" />
+    <Compile Include="Objects\Structured Fields\PEC.cs" />
+    <Compile Include="Objects\Structured Fields\PFC.cs" />
+    <Compile Include="Objects\Structured Fields\PGD.cs" />
+    <Compile Include="Objects\Structured Fields\PGP2.cs" />
+    <Compile Include="Objects\Structured Fields\PGP1.cs" />
+    <Compile Include="Objects\Structured Fields\PMC.cs" />
+    <Compile Include="Objects\Structured Fields\PPO.cs" />
+    <Compile Include="Objects\Structured Fields\PTD2.cs" />
+    <Compile Include="Objects\Structured Fields\PTD1.cs" />
+    <Compile Include="Objects\Structured Fields\RCD.cs" />
+    <Compile Include="Objects\Structured Fields\TLE.cs" />
+    <Compile Include="Objects\Structured Fields\UNKNOWN.cs" />
+    <Compile Include="Objects\Structured Fields\NOP.cs" />
+    <Compile Include="Objects\Structured Fields\PTX.cs" />
+    <Compile Include="Objects\PTX Control Sequences\STO.cs" />
+    <Compile Include="Objects\DataStructure.cs" />
+    <Compile Include="Objects\PTXControlSequence.cs" />
+    <Compile Include="Objects\Structured Fields\XMD.cs" />
+    <Compile Include="Objects\ImageSelfDefiningField.cs" />
+    <Compile Include="Objects\Triplets\AreaDefinition.cs" />
+    <Compile Include="Objects\Triplets\AttributeQualifier.cs" />
+    <Compile Include="Objects\Triplets\AttributeValue.cs" />
+    <Compile Include="Objects\Triplets\CharacterRotation.cs" />
+    <Compile Include="Objects\Triplets\CMRTagFidelity.cs" />
+    <Compile Include="Objects\Triplets\CodedGraphicCharacterSetGlobalIdentifier.cs" />
+    <Compile Include="Objects\Triplets\ColorFidelity.cs" />
+    <Compile Include="Objects\Triplets\ColorManagementResourceDescriptor.cs" />
+    <Compile Include="Objects\Triplets\ColorSpecification.cs" />
+    <Compile Include="Objects\Triplets\Comment.cs" />
+    <Compile Include="Objects\Triplets\DescriptorPosition.cs" />
+    <Compile Include="Objects\Triplets\DeviceAppearance.cs" />
+    <Compile Include="Objects\Triplets\ExtensionFont.cs" />
+    <Compile Include="Objects\Triplets\EncodingSchemeID.cs" />
+    <Compile Include="Objects\Triplets\ExtendedResourceLocalIdentifier.cs" />
+    <Compile Include="Objects\Triplets\FinishingFidelity.cs" />
+    <Compile Include="Objects\Triplets\FinishingOperation.cs" />
+    <Compile Include="Objects\Triplets\FontDescriptorSpecification.cs" />
+    <Compile Include="Objects\Triplets\FontFidelity.cs" />
+    <Compile Include="Objects\Triplets\MetricAdjustment.cs" />
+    <Compile Include="Objects\Triplets\FontHorizontalScaleFactor.cs" />
+    <Compile Include="Objects\Triplets\FontResolutionandMetricTechnology.cs" />
+    <Compile Include="Objects\Triplets\FullyQualifiedName.cs" />
+    <Compile Include="Objects\Triplets\GCSGID_CPGID_CCSID.cs" />
+    <Compile Include="Objects\Triplets\ImageResolution.cs" />
+    <Compile Include="Objects\Triplets\LocaleSelector.cs" />
+    <Compile Include="Objects\Triplets\MappingOption.cs" />
+    <Compile Include="Objects\Triplets\MeasurementUnits.cs" />
+    <Compile Include="Objects\Triplets\MediaEjectControl.cs" />
+    <Compile Include="Objects\Triplets\MediaFidelity.cs" />
+    <Compile Include="Objects\Triplets\MediumMapPageNumber.cs" />
+    <Compile Include="Objects\Triplets\MediumOrientation.cs" />
+    <Compile Include="Objects\Triplets\MODCAInterchangeSet.cs" />
+    <Compile Include="Objects\Triplets\ObjectAreaSize.cs" />
+    <Compile Include="Objects\Triplets\ObjectByteExtent.cs" />
+    <Compile Include="Objects\Triplets\ObjectOriginIdentifier.cs" />
+    <Compile Include="Objects\Triplets\ObjectByteOffset.cs" />
+    <Compile Include="Objects\Triplets\ObjectClassification.cs" />
+    <Compile Include="Objects\Triplets\ObjectContainerPresentationSpaceSize.cs" />
+    <Compile Include="Objects\Triplets\ObjectCount.cs" />
+    <Compile Include="Objects\Triplets\ObjectFontDescriptorData.cs" />
+    <Compile Include="Objects\Triplets\ObjectFunctionSetSpecification.cs" />
+    <Compile Include="Objects\Triplets\ObjectOffset.cs" />
+    <Compile Include="Objects\Triplets\ObjectStructuredFieldExtent.cs" />
+    <Compile Include="Objects\Triplets\ObjectStructuredFieldOffset.cs" />
+    <Compile Include="Objects\Triplets\PageOverlayConditionalProcessing.cs" />
+    <Compile Include="Objects\Triplets\PagePositionInformation.cs" />
+    <Compile Include="Objects\Triplets\ParameterValue.cs" />
+    <Compile Include="Objects\Triplets\PresentationControl.cs" />
+    <Compile Include="Objects\Triplets\PresentationSpaceResetMixing.cs" />
+    <Compile Include="Objects\Triplets\RenderingIntent.cs" />
+    <Compile Include="Objects\Triplets\ResourceLocalIdentifier.cs" />
+    <Compile Include="Objects\Triplets\ResourceObjectInclude.cs" />
+    <Compile Include="Objects\Triplets\ResourceSectionNumber.cs" />
+    <Compile Include="Objects\Triplets\ResourceUsageAttribute.cs" />
+    <Compile Include="Objects\Triplets\TextFidelity.cs" />
+    <Compile Include="Objects\Triplets\CRCResourceManagement.cs" />
+    <Compile Include="Objects\Triplets\TonerSaver.cs" />
+    <Compile Include="Objects\Triplets\UNKNOWN.cs" />
+    <Compile Include="Objects\Triplets\LocalDateandTimeStamp.cs" />
+    <Compile Include="Objects\Triplets\UniversalDateAndTimeStamp.cs" />
+    <Compile Include="Objects\Triplets\PresentationSpaceMixingRule.cs" />
+    <Compile Include="Objects\Helpers\Lookups.cs" />
+    <Compile Include="Objects\Triplets\UP3iFinishingOperation.cs" />
+    <Compile Include="Objects\Offset.cs" />
+    <Compile Include="AFPFile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Objects\StructuredField.cs" />
+    <Compile Include="Objects\Triplet.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
